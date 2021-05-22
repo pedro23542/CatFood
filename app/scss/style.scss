@@ -15,7 +15,8 @@
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
-  &.header__inner--no_bg{
+
+  &.header__inner--no_bg {
     background-image: none;
     height: auto;
   }
@@ -50,12 +51,13 @@
   .active-link {
     border-bottom: 2px solid $white;
   }
-  
+
   .active-link-green {
     border-bottom: 2px solid $green;
   }
 }
-.header__list.header__list--color a{
+
+.header__list.header__list--color a {
   color: $black;
 }
 
@@ -383,32 +385,218 @@
 .footer {
   background-color: #f2f2f2;
 }
-.footer__inner{
+
+.footer__inner {
   display: flex;
   justify-content: space-between;
   padding: 56px 0;
 }
+
 .text-log {}
 
 .footer__icons {
   display: flex;
-  
+
 }
 
 .foter__icon {
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-right: 28px;
   }
-  svg{
+
+  svg {
     transition: all 0.3s;
     stroke: #3f3f3f;
     fill: #3f3f3f;
   }
-  svg:hover{
+
+  svg:hover {
     stroke: $green;
     fill: $green;
   }
 }
 
-.html-icon {
+
+.catalog {
+  .big-title {
+    margin-bottom: 155px;
+  }
+}
+
+.container {}
+
+.big-title {}
+
+.catalog__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog__item {
+  width: 245px;
+  background-color: #f2f2f2;
+  position: relative;
+  padding: 165px 40px 40px;
+  margin-bottom: 142px;
+
+}
+
+.catalog__item-inner {}
+
+.catalog__item-img {
+  position: absolute;
+  top: -55px;
+}
+
+.catalog__item-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $black;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 28px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.catalog__item-info {
+  font-size: 14px;
+  font-weight: 400;
+  color: $black-week;
+  font-family: Verdana, Tahoma, sans-serif;
+  margin-bottom: 33px;
+}
+
+.catalog__item-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.catalog__item-oreder {
+  display: block;
+  height: 40px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $green;
+  text-align: center;
+  span{
+    line-height: 40px;
+  }
+}
+.catalog__item.catalog__item--more{
+  background-color: #fff;
+  border: 1px solid #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .catalog__item-info{
+    text-align: center;
+  }
+}
+
+.catalog__item--more {}
+
+.extra-goods {}
+
+.line-title {
+  margin-top: -75px;
+  position: relative;
+  margin-bottom: 75px;
+  &::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $green;
+    position: absolute;
+    top: 26px;
+    z-index: -99;
+  }
+  span{
+    font-size: 36px;
+    font-weight: 400;
+    color: $black;
+    background-color: #fff;
+    padding: 0 35px;
+    margin-left: -35px;
+  }
+ 
+}
+
+.extra-goods__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 85px;
+}
+
+.exetra-goods__table {
+  max-width: 895px;
+  width: 100%;
+}
+
+.exetra-goods__row {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #cdcdcd;
+  &:first-child{
+    border-top: 1px solid #cdcdcd;
+  }
+}
+
+.extra-goods__type {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #222222;
+  max-width: 325px;
+  width: 100%;
+}
+
+.extra-goods__quantity {
+  max-width: 243px;
+  width: 100%;
+  color: #444444;
+}
+
+.extra-goods__sum {
+  max-width: 80px;
+  width: 100%;
+  color: #444444;
+}
+
+.extra-goods__btn {
+  width: 100%;
+  background-color: $green;
+  max-width: 245px;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+.extra-goods__gift {
+  width: 245px;
+  background-image: url(../images/gift_photo.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 65px 48px;
+  color: #fff;
+}
+
+.extra-goods__gift-img{
+  flex-grow: 1;
+}
+.extra-goods__gift-text {
+  text-align: center;
 }

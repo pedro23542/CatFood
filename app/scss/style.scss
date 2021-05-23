@@ -484,30 +484,37 @@
   color: $white;
   background-color: $green;
   text-align: center;
-  span{
+
+  span {
     line-height: 40px;
   }
 }
-.catalog__item.catalog__item--more{
+
+.catalog__item.catalog__item--more {
   background-color: #fff;
   border: 1px solid #f2f2f2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  .catalog__item-info{
+
+  .catalog__item-info {
     text-align: center;
   }
 }
 
 .catalog__item--more {}
 
-.extra-goods {}
+.extra-goods {
+  .line-title {
+    margin-top: -75px;
+  }
+}
 
 .line-title {
-  margin-top: -75px;
   position: relative;
   margin-bottom: 75px;
-  &::before{
+
+  &::before {
     content: '';
     display: block;
     width: 100%;
@@ -517,7 +524,8 @@
     top: 26px;
     z-index: -99;
   }
-  span{
+
+  span {
     font-size: 36px;
     font-weight: 400;
     color: $black;
@@ -525,7 +533,7 @@
     padding: 0 35px;
     margin-left: -35px;
   }
- 
+
 }
 
 .extra-goods__inner {
@@ -544,7 +552,8 @@
   align-items: center;
   padding: 16px 0;
   border-bottom: 1px solid #cdcdcd;
-  &:first-child{
+
+  &:first-child {
     border-top: 1px solid #cdcdcd;
   }
 }
@@ -594,9 +603,240 @@
   color: #fff;
 }
 
-.extra-goods__gift-img{
+.extra-goods__gift-img {
   flex-grow: 1;
 }
+
 .extra-goods__gift-text {
   text-align: center;
+}
+
+.header__line-form {
+  margin-bottom: 0;
+}
+
+.pickup-program {
+  .big-title {
+    margin-bottom: 53px;
+  }
+
+  .line-title {
+    margin-bottom: 0;
+  }
+}
+
+.pickup-program {
+  padding-bottom: 40px;
+}
+
+.pickup-program__description {
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $black;
+  max-width: 330px;
+}
+
+.form {}
+
+.form__row {
+  padding: 68px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.form__block {
+  display: flex;
+  flex-direction: column;
+  max-width: 570px;
+  width: 100%;
+}
+
+.form__block--radiobtn {
+  border: 1px solid #cdcdcd;
+  justify-content: center;
+  padding-left: 28px;
+
+  label {
+    width: fit-content;
+  }
+}
+
+.form__inputs {
+  color: #222222;
+  display: flex;
+  align-items: center;
+
+  input {
+    height: 52px;
+    border: 1px solid #cdcdcd;
+    padding: 0 20px;
+    flex-grow: 1;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  input::placeholder {
+    color: #444444;
+    text-transform: uppercase;
+  }
+}
+
+.form__inputs-text {
+  margin-right: 16px;
+}
+
+.form__radio-inputs {
+  padding: 9px;
+  padding-left: 60px;
+  position: relative;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.form__radio-btn,
+.form__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.form__radio-style {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  position: absolute;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #68b738;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+}
+
+.form__radio-btn:checked+.form__radio-style::before {
+  display: block;
+}
+
+.form__contacts.form__inputs:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.form__contacts {
+  flex-basis: 570px;
+  margin-bottom: 0;
+ 
+
+  input {
+    width: initial;
+    max-width: 475px;
+    width: 100%;
+    padding-right: 40px;
+  }
+  input[type="tel"] {
+    background-image: url(../images/icons/phone_input_icon.png);
+    background-position: calc(100% - 18px) 50%;
+    background-repeat: no-repeat;
+  }
+  input[type="email"] {
+    background-image: url(../images/icons/mail_input_icon.png);
+    background-position: calc(100% - 18px) 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.line-title {}
+
+.form__comment {
+  width: 100%;
+  height: 174px;
+  padding: 17px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #444444;
+  resize: none;
+  border: 1px solid #cdcdcd;
+}
+
+.form__chexbox-inputs {
+  padding: 11px 11px 11px 58px;
+  position: relative;
+  cursor: pointer;
+}
+
+.form__checkbox-style {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #cdcdcd;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 21px;
+    height: 16px;
+    background-image: url(../images/tick.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+}
+
+.form__checkbox:checked+.form__checkbox-style::before {
+  display: block;
+}
+
+.form__submit {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $green;
+  max-width: 568px;
+  width: 100%;
+  height: 52px;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 40px;
+
+  &::before {
+    content: '* — Обязательные поля';
+    display: block;
+    position: absolute;
+    right: -221px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #444444;
+    text-transform: initial;
+  }
 }

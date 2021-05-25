@@ -5,7 +5,12 @@
 .header {
   margin-bottom: 80px;
 }
-
+.mobile-navbtn{
+  display: none;
+}
+.heder__logo-mobile{
+  display: none;
+}
 .header__inner {
   padding-top: 54px;
   height: 696px;
@@ -174,7 +179,6 @@
 }
 
 .show-work {
-  margin-bottom: 90px;
 }
 
 .big-title {
@@ -188,12 +192,14 @@
 .show-work__items {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .show-work__item {
   width: 247px;
   min-height: 227px;
   position: relative;
+  margin-bottom: 87px;
 }
 
 .show-work__item-icon {
@@ -341,7 +347,7 @@
   }
 }
 
-.map {
+.map__box {
   height: 400px;
   max-width: 1440px;
   margin: 0 auto;
@@ -840,3 +846,7 @@
     text-transform: initial;
   }
 }
+
+// MEDIA QUERIES
+
+@import 'media.scss';

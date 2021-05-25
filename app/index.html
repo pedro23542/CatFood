@@ -15,11 +15,28 @@
     <header class="header">
 
         <div class="header__inner">
-            <div class="container">
+            <div class="container container--mobile">
                 <div class="header__line">
-                    <div class="header__logo">
-                        <img src="images/logo.png" alt="Логотип">
+                    <div class="mobile-navbtn">
+                        <div class="mobile-navbtn-inner">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
                     </div>
+                    <div class="header__logo">
+                        <picture>
+                            <source srcset="images/logo.png" type="image/png" media="(min-width:768px)">
+                            <!-- больше чем 768 на мобильном экране загрузится только маленькое изображение-->
+                            <!-- благодаря атрибуту type можно исользовать webp -->
+                            <source srcset="images/logo_mobile.png" type="image/png" media="(max-width:768px)">
+                            <img src="images/logo.png" alt="Логотип">
+                            <!-- для старых браузеров -->
+                        </picture>
+                    </div>
+                    <a class="heder__logo-mobile" href="#">
+                        <img src="images/logo_mobile_header.png" alt="логотип">
+                    </a>
                     <nav class="header__nav">
                         <ul class="header__list">
                             <li class="active-link"><a href="#">Главная</a></li>
@@ -28,7 +45,9 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="header__content">
+            </div>
+            <div class="header__content">
+                <div class="container">
                     <div class="header__text">
                         <h1 class="header__title">Функциональное питание для котов</h1>
                         <p class="header__sub-title">Занялся собой? Займись котом!</p>
@@ -43,7 +62,7 @@
             </div>
         </div>
     </header>
-
+    
     <section class="catalog-options">
         <div class="container">
             <div class="catalog-options__items">
@@ -51,27 +70,33 @@
                     <div class="catalog-options__img skinny-cat-size">
                         <img src="images/skinny-cat.png" alt="skinny cat">
                     </div>
-                    <div class="catalog-options__title"> Похудение</div>
-                    <p class="catalog-options__text text-block">
-                        Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat
-                        Energy Slim поможет вашему питомцу сбросить лишний вес.
-                    </p>
-                    <a href="#" class="catalog-options__link">Каталог Slim</a>
+                    <div class="catalog-options__item-inner">
+                        <div class="catalog-options__title"> Похудение</div>
+                        <p class="catalog-options__text text-block">
+                            Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету!
+                            Cat
+                            Energy Slim поможет вашему питомцу сбросить лишний вес.
+                        </p>
+                        <a href="#" class="catalog-options__link">Каталог Slim</a>
+                    </div>
                 </div>
                 <div class="catalog-options__item">
                     <div class="catalog-options__img strong-cat-size">
                         <img src="images/strong-cat.png" alt="strong cat">
                     </div>
-                    <div class="catalog-options__title">Набор Массы</div>
-                    <p class="catalog-options__text text-block">
-                        Заработать авторитет среди дворовых котов и даже собак?
-                        Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
-                    </p>
-                    <a href="#" class="catalog-options__link">Каталог Slim</a>
+                    <div class="catalog-options__item-inner">
+                        <div class="catalog-options__title">Набор Массы</div>
+                        <p class="catalog-options__text text-block">
+                            Заработать авторитет среди дворовых котов и даже собак?
+                            Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+                        </p>
+                        <a href="#" class="catalog-options__link">Каталог Slim</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="show-work">
         <div class="container">
             <div class="big-title">
@@ -163,7 +188,8 @@
         </div>
         </div>
     </section>
-    <section class="map" id="map">
+
+    <section class="map" >
         <div class="container">
             <div class="map__info-wrapper">
             <div class="map__info">
@@ -176,7 +202,9 @@
             </div>
         </div>
         </div>
+        <div class="map__box" id="map"></div>
     </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
@@ -205,8 +233,10 @@
         </div>
         </div>
     </footer>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?44beb51d-aa40-4054-aeec-d5ce4fc547ec&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?44beb51d-aa40-4054-aeec-d5ce4fc547ec&lang=ru_RU"
+        type="text/javascript"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>

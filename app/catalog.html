@@ -12,18 +12,35 @@
 
 <body>
 
-    <header class="header">
+    <header class="header header__catalog">
 
-        <div class="header__inner header__inner--no_bg">
-            <div class="container">
+        <div class="header__inner  header__inner--no_bg">
+            <div class="container container--mobile">
                 <div class="header__line">
-                    <div class="header__logo">
-                        <img src="images/logo.png" alt="Логотип">
+                    <div class="mobile-navbtn">
+                        <div class="mobile-navbtn-inner">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
                     </div>
+                    <div class="header__logo">
+                        <picture>
+                            <source srcset="images/logo.png" type="image/png" media="(min-width:768px)">
+                            <!-- больше чем 768 на мобильном экране загрузится только маленькое изображение-->
+                            <!-- благодаря атрибуту type можно исользовать webp -->
+                            <source srcset="images/logo_mobile.png" type="image/png" media="(max-width:768px)">
+                            <img src="images/logo.png" alt="Логотип">
+                            <!-- для старых браузеров -->
+                        </picture>
+                    </div>
+                    <a class="heder__logo-mobile" href="#">
+                        <img src="images/logo_mobile_header.png" alt="логотип">
+                    </a>
                     <nav class="header__nav">
                         <ul class="header__list header__list--color">
-                            <li><a href="#">Главная</a></li>
-                            <li class="active-link-green"><a href="#">Каталог продукции</a></li>
+                            <li class="active-link-green"><a href="#">Главная</a></li>
+                            <li><a href="#">Каталог продукции</a></li>
                             <li><a href="#">Подбор программы</a></li>
                         </ul>
                     </nav>
@@ -67,7 +84,7 @@
                 </div>
                 <div class="catalog__item">
                     <div class="catalog__item-inner">
-                        <div class="catalog__item-img">
+                        <div class="catalog__item-img catalog__item-img--big">
                             <img src="images/content/catfoodbig.png" alt="Cat Energy">
                         </div>
                         <h4 class="catalog__item-title">
@@ -121,7 +138,7 @@
                 </div>
                 <div class="catalog__item">
                     <div class="catalog__item-inner">
-                        <div class="catalog__item-img">
+                        <div class="catalog__item-img catalog__item-img--big">
                             <img src="images/content/catfoodbig.png" alt="Cat Energy">
                         </div>
                         <h4 class="catalog__item-title">
@@ -175,7 +192,7 @@
                 </div>
                 <div class="catalog__item">
                     <div class="catalog__item-inner">
-                        <div class="catalog__item-img">
+                        <div class="catalog__item-img catalog__item-img--big">
                             <img src="images/content/catfoodbig.png" alt="Cat Energy">
                         </div>
                         <h4 class="catalog__item-title">
@@ -294,20 +311,22 @@
     </div>
     </section>
 
-    <section class="map" id="map">
+    <section class="map" >
         <div class="container">
             <div class="map__info-wrapper">
-                <div class="map__info">
-                    <div class="map__info-text">
-                        приглашаем к сотрудничеству дилеров!
-                    </div>
-                    <div class="map__info-adress">
-                        ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
-                    </div>
+            <div class="map__info">
+                <div class="map__info-text">
+                    приглашаем к сотрудничеству  дилеров!
+                  </div>
+                <div class="map__info-adress">
+                    ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
                 </div>
             </div>
         </div>
+        </div>
+        <div class="map__box" id="map"></div>
     </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">

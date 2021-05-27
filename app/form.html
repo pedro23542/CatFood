@@ -11,19 +11,35 @@
 </head>
 
 <body>
+    <header class="header header__catalog">
 
-    <header class="header">
-
-        <div class="header__inner header__inner--no_bg">
-            <div class="container">
-                <div class="header__line header__line-form">
-                    <div class="header__logo">
-                        <img src="images/logo.png" alt="Логотип">
+        <div class="header__inner  header__inner--no_bg">
+            <div class="container container--mobile">
+                <div class="header__line">
+                    <div class="mobile-navbtn">
+                        <div class="mobile-navbtn-inner">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
                     </div>
+                    <div class="header__logo">
+                        <picture>
+                            <source srcset="images/logo.png" type="image/png" media="(min-width:768px)">
+                            <!-- больше чем 768 на мобильном экране загрузится только маленькое изображение-->
+                            <!-- благодаря атрибуту type можно исользовать webp -->
+                            <source srcset="images/logo_mobile.png" type="image/png" media="(max-width:768px)">
+                            <img src="images/logo.png" alt="Логотип">
+                            <!-- для старых браузеров -->
+                        </picture>
+                    </div>
+                    <a class="heder__logo-mobile" href="#">
+                        <img src="images/logo_mobile_header.png" alt="логотип">
+                    </a>
                     <nav class="header__nav">
                         <ul class="header__list header__list--color">
-                            <li><a href="#">Главная</a></li>
-                            <li class="active-link-green"><a href="#">Каталог продукции</a></li>
+                            <li class="active-link-green"><a href="#">Главная</a></li>
+                            <li><a href="#">Каталог продукции</a></li>
                             <li><a href="#">Подбор программы</a></li>
                         </ul>
                     </nav>
@@ -85,11 +101,11 @@
             <div class="form__row">
                 <label class="form__inputs form__contacts">
                     <span class="form__inputs-text">Email:*</span>
-                    <input type="email" name="email" placeholder="kuklachev@gmail.com">
+                    <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
                 </label>
                 <label class="form__inputs form__contacts">
                     <span class="form__inputs-text">Телефон:*</span>
-                    <input type="tel" name="phone" placeholder="8 (960) 900-60-90">
+                    <input type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
                 </label>
             </div>
         </div>
@@ -110,7 +126,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="form__row">
+            <div class="form__row form__row--checkbox">
                 <label class="form__chexbox-inputs">
                     <input class="form__checkbox" type="checkbox" name="sweetener">
                     <span class="form__checkbox-style"></span>
@@ -138,10 +154,9 @@
     </section>
 
 
-
-    <section class="map" id="map">
-        <div class="container">
-            <div class="map__info-wrapper">
+    <section class="map">
+        <div class="map__info-wrapper">
+            <div class="container">
                 <div class="map__info">
                     <div class="map__info-text">
                         приглашаем к сотрудничеству дилеров!
@@ -152,8 +167,9 @@
                 </div>
             </div>
         </div>
+        <div class="map__box" id="map"></div>
     </section>
-    
+
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">

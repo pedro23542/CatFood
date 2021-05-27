@@ -663,6 +663,11 @@
   text-transform: uppercase;
 }
 
+.form__row.form__row--checkbox{
+  display: grid;
+  grid-template-columns:  repeat(4, 1fr);
+}
+
 .form__block {
   display: flex;
   flex-direction: column;
